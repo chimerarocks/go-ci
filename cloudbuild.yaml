@@ -1,14 +1,10 @@
 steps:
-  - id: "ls"
-    name: alpine
-    args: ['ls']
-
   - id: "Go build"
     name: "gcr.io/cloud-builders/go"
     args: ["build"]
-    env: ["GOPATH=./src"]
+    env: ["GOPATH=."]
 
   - id: "Go test"
     name: "gcr.io/cloud-builders/go"
     args: ["test"]
-    env: ["GOPATH=./src"]
+    env: ["GOPATH=."]

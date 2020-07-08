@@ -1,10 +1,10 @@
 steps:
   - id: "Go build"
     name: "gcr.io/cloud-builders/go"
-    args: ["build"]
+    args: ["build", "sum"]
     env: ["GOPATH=."]
 
   - id: "Go test"
     name: "gcr.io/cloud-builders/go"
-    args: ["test"]
+    args: ["test", "sum"]
     env: ["GOPATH=."]
